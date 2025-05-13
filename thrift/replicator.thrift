@@ -35,6 +35,7 @@ enum ReplicationTaskType {
 enum DomainOperation {
   Create
   Update
+  Delete
 }
 
 struct DomainTaskAttributes {
