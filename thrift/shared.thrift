@@ -522,6 +522,7 @@ struct ContinueAsNewWorkflowExecutionDecisionAttributes {
   140: optional Memo memo
   150: optional SearchAttributes searchAttributes
   160: optional i32 jitterStartSeconds
+  170: optional bool bufferOneCronWorkflow
 }
 
 struct StartChildWorkflowExecutionDecisionAttributes {
@@ -541,6 +542,7 @@ struct StartChildWorkflowExecutionDecisionAttributes {
   130: optional Header header
   140: optional Memo memo
   150: optional SearchAttributes searchAttributes
+  160: optional bool bufferOneCronWorkflow
 }
 
 struct Decision {
@@ -590,6 +592,7 @@ struct WorkflowExecutionStartedEventAttributes {
   140: optional Header header
   150: optional map<string, string> partitionConfig
   160: optional string requestId
+  170: optional bool bufferOneCronWorkflow
 }
 
 struct ResetPoints{
@@ -894,6 +897,7 @@ struct StartChildWorkflowExecutionInitiatedEventAttributes {
   170: optional i32 delayStartSeconds
   180: optional i32 jitterStartSeconds
   190: optional i64 (js.type = "Long") firstRunAtTimestamp
+  200: optional bool bufferOneCronWorkflow
 }
 
 struct StartChildWorkflowExecutionFailedEventAttributes {
@@ -1192,6 +1196,7 @@ struct StartWorkflowExecutionRequest {
   160: optional i32 delayStartSeconds
   170: optional i32 jitterStartSeconds
   180: optional i64 (js.type = "Long") firstRunAtTimestamp
+  190: optional bool bufferOneCronWorkflow
 }
 
 struct StartWorkflowExecutionResponse {
@@ -1429,6 +1434,7 @@ struct SignalWithStartWorkflowExecutionRequest {
   180: optional i32 delayStartSeconds
   190: optional i32 jitterStartSeconds
   200: optional i64 (js.type = "Long") firstRunAtTimestamp
+  210: optional bool bufferOneCronWorkflow
 }
 
 struct SignalWithStartWorkflowExecutionAsyncRequest {

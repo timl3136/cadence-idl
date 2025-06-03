@@ -119,6 +119,7 @@ message ContinueAsNewWorkflowExecutionDecisionAttributes {
   Memo memo = 13;
   SearchAttributes search_attributes = 14;
   google.protobuf.Duration jitter_start = 15;
+  bool buffer_one_cron_workflow= 16;
 }
 
 message StartChildWorkflowExecutionDecisionAttributes {
@@ -137,6 +138,7 @@ message StartChildWorkflowExecutionDecisionAttributes {
   Header header = 13;
   Memo memo = 14;
   SearchAttributes search_attributes = 15;
+  bool buffer_one_cron_workflow= 16;
 }
 
 message SignalExternalWorkflowExecutionDecisionAttributes {

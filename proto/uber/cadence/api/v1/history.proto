@@ -116,6 +116,7 @@ message WorkflowExecutionStartedEventAttributes {
   google.protobuf.Timestamp first_scheduled_time = 23;
   map<string, string> partition_config = 24;
   string request_id = 25;
+  bool buffer_one_cron_workflow = 26;
 }
 
 message WorkflowExecutionCompletedEventAttributes {
@@ -393,6 +394,7 @@ message StartChildWorkflowExecutionInitiatedEventAttributes {
   google.protobuf.Duration delay_start = 18;
   google.protobuf.Duration jitter_start = 19;
   google.protobuf.Timestamp first_run_at = 20;
+  bool buffer_one_cron_workflow = 21;
 }
 
 message StartChildWorkflowExecutionFailedEventAttributes {
