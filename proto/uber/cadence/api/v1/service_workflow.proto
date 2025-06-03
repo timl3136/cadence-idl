@@ -141,7 +141,7 @@ message StartWorkflowExecutionRequest {
   google.protobuf.Duration delay_start = 16;
   google.protobuf.Duration jitter_start = 17;
   google.protobuf.Timestamp first_run_at = 18;
-  bool buffer_one_cron_workflow= 19;
+  CronOverlapPolicy cron_overlap_policy = 19;
 }
 
 message StartWorkflowExecutionResponse {
