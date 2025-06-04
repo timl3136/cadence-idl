@@ -325,7 +325,7 @@ enum ArchivalStatus {
 }
 
 enum CronOverlapPolicy {
-  DISABLED,
+  SKIPPED,
   BUFFERONE,
 }
 
