@@ -148,7 +148,7 @@ struct WorkflowExecutionInfo {
   128: optional map<string, string> partitionConfig
   130: optional binary checksum
   132: optional string checksumEncoding
-  134: optional shared.CronOverlapPolicy cronOverlapPolicy
+  134: optional i32 cronOverlapPolicy
   136: optional shared.ActiveClusterSelectionPolicy activeClusterSelectionPolicy
 }
 
